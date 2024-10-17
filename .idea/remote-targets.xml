@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteTargetsManager">
+    <targets>
+      <target name="ubuntu@43.143.248.104:22" type="ssh/sftp" uuid="ecfd3725-2d9f-4dd2-b0e9-c1dc79845c77">
+        <config>
+          <option name="projectRootOnTarget" value="/home/ubuntu/ocr-server-master" />
+          <option name="serverName" value="ubuntu@43.143.248.104:22 password" />
+        </config>
+        <ContributedStateBase type="GoLanguageRuntime">
+          <config>
+            <option name="goPath" value="/home/ubuntu/go" />
+            <option name="goRoot" value="/snap/bin/go" />
+            <option name="goVersion" value="go1.23.1 linux/amd64" />
+          </config>
+        </ContributedStateBase>
+      </target>
+    </targets>
+  </component>
+</project>

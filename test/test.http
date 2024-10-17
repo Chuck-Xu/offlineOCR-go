@@ -1,0 +1,23 @@
+
+POST http://localhost:1111/ocr
+Content-Type: application/json
+
+{
+    "image_path": "D:/code/codeProj/go/ocr-server-master/test/作业.png"
+}
+###
+POST http://localhost:1111/ocr
+Content-Type: application/json
+
+{
+  "image_path": "D:/code/codeProj/go/ocr-server-master/test/test.jpg"
+}
+
+
+###
+POST http://localhost:1111/ocr
+Content-Type: application/json
+
+{
+    "image_base64": ""
+}
