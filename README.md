@@ -32,7 +32,7 @@ OCR 服务器是一个高性能、可扩展的光学字符识别（OCR）服务�
 
 1. 克隆仓库：
 ```
-git clone https://github.com/suifei/ocr-server.git
+git clone https://github.com/Chuck-Xu/offlineOCR-go.git
 ```
 2. 进入项目目录：
 ```
@@ -79,13 +79,13 @@ ocr-server.exe
 #### 使用命令行参数覆盖配置文件中的设置
 
 ```sh
-ocr-server.exe -addr 192.168.1.100 -port 8080 -min-processors 8 -log-file C:\logs\ocr_server.log
+ocr-server.exe -addr 192.168.1.100 -port 8080 -min-processors 8 -log-file D:\logs\ocr_server.log
 ```
 
 #### 仅使用命令行参数启动服务
 
 ```sh
-ocr-server.exe -addr 192.168.1.100 -port 8080 -ocr C:\path\to\ocr_executable -min-processors 8 -max-processors 16 -queue-size 200 -scale-threshold 100 -degrade-threshold 50 -idle-timeout 10m -warm-up-count 4 -shutdown-timeout 1m -log-file C:\logs\ocr_server.log -log-max-size 200 -log-max-backups 5 -log-max-age 30 -log-compress
+ocr-server.exe -addr 192.168.1.100 -port 8080 -ocr D:\path\to\ocr_executable -min-processors 8 -max-processors 16 -queue-size 200 -scale-threshold 100 -degrade-threshold 50 -idle-timeout 10m -warm-up-count 4 -shutdown-timeout 1m -log-file D:\logs\ocr_server.log -log-max-size 200 -log-max-backups 5 -log-max-age 30 -log-compress
 ```
 
 #### 显示帮助信息
@@ -101,7 +101,7 @@ ocr-server.exe -help
 #### 注册服务
 
 ```sh
-sc create OCRServer binPath= "C:\path\to\ocr-server.exe" start= auto
+sc create OCRServer binPath= "D:\path\to\ocr-server.exe" start= auto
 ```
 
 #### 启动服务
@@ -159,13 +159,13 @@ Content-Type: application/json
   "image_base64": "base64_encoded_image_data"
 }
 ```
-
+详情参照[test.http文件](https://github.com/Chuck-Xu/offlineOCR-go/blob/master/test/test.http)
 ### 服务器统计
 
 获取服务器统计信息：
 
 ```http
-GET /stats
+GET 127.0.0.1:port/stats
 ```
 
 ## 配置选项
